@@ -27,6 +27,9 @@ function computerWinsRound() {
 function playRound(playerSel, computerSel) {
   if (playScore.textContent == "5" || compScore.textContent == "5") return;
   if (playerSel === computerSel) {
+    resultText.textContent = "It's a tie!";
+    resultText.classList.remove("win");
+    resultText.classList.remove("lose");
     return "It's a tie!";
   }
   if (playerSel === "rock")
